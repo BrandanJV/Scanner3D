@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Sat May  8 18:50:53 2021
+// Date        : Sun May 16 16:00:48 2021
 // Host        : LAPTOP-5IS28MMD running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim {c:/Users/jimen/Documents/Tec/6to Semestre/Lab de
 //               Sistemas/Scanner3D/Scanner3D.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v}
@@ -15,35 +15,23 @@
 (* NotValidForBitStream *)
 module clk_wiz_0
    (clk25,
-    reset,
-    locked,
     clk);
   output clk25;
-  input reset;
-  output locked;
   input clk;
 
   (* IBUF_LOW_PWR *) wire clk;
   wire clk25;
-  wire locked;
-  wire reset;
 
   clk_wiz_0_clk_wiz_0_clk_wiz inst
        (.clk(clk),
-        .clk25(clk25),
-        .locked(locked),
-        .reset(reset));
+        .clk25(clk25));
 endmodule
 
 (* ORIG_REF_NAME = "clk_wiz_0_clk_wiz" *) 
 module clk_wiz_0_clk_wiz_0_clk_wiz
    (clk25,
-    reset,
-    locked,
     clk);
   output clk25;
-  input reset;
-  output locked;
   input clk;
 
   wire clk;
@@ -52,8 +40,6 @@ module clk_wiz_0_clk_wiz_0_clk_wiz
   wire clk_clk_wiz_0;
   wire clkfbout_buf_clk_wiz_0;
   wire clkfbout_clk_wiz_0;
-  wire locked;
-  wire reset;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
@@ -68,6 +54,7 @@ module clk_wiz_0_clk_wiz_0_clk_wiz
   wire NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED;
   wire NLW_mmcm_adv_inst_DRDY_UNCONNECTED;
+  wire NLW_mmcm_adv_inst_LOCKED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_PSDONE_UNCONNECTED;
   wire [15:0]NLW_mmcm_adv_inst_DO_UNCONNECTED;
 
@@ -165,13 +152,13 @@ module clk_wiz_0_clk_wiz_0_clk_wiz
         .DO(NLW_mmcm_adv_inst_DO_UNCONNECTED[15:0]),
         .DRDY(NLW_mmcm_adv_inst_DRDY_UNCONNECTED),
         .DWE(1'b0),
-        .LOCKED(locked),
+        .LOCKED(NLW_mmcm_adv_inst_LOCKED_UNCONNECTED),
         .PSCLK(1'b0),
         .PSDONE(NLW_mmcm_adv_inst_PSDONE_UNCONNECTED),
         .PSEN(1'b0),
         .PSINCDEC(1'b0),
         .PWRDWN(1'b0),
-        .RST(reset));
+        .RST(1'b0));
 endmodule
 `ifndef GLBL
 `define GLBL

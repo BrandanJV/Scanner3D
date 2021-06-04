@@ -70,9 +70,6 @@ port
  (-- Clock in ports
   -- Clock out ports
   clk25          : out    std_logic;
-  -- Status and control signals
-  reset             : in     std_logic;
-  locked            : out    std_logic;
   clk           : in     std_logic
  );
 end component;
@@ -85,9 +82,6 @@ your_instance_name : clk_wiz_0
    port map ( 
   -- Clock out ports  
    clk25 => clk25,
-  -- Status and control signals                
-   reset => reset,
-   locked => locked,
    -- Clock in ports
    clk => clk
  );

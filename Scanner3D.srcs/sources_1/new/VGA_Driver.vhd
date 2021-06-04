@@ -29,7 +29,7 @@ entity VGA_Driver is
         column, row: out std_logic_vector(9 downto 0));
 end VGA_Driver;
 
-architecture Behavioral of VGA_Driver is
+ architecture Behavioral of VGA_Driver is
 
     component clk_wiz_0
         port
